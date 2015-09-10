@@ -1,2 +1,16 @@
 ---
 # tasks file for hosts
+
+- name: Set the hostname of the machine
+  sudo: yes
+  hostname:
+    name: "{{ machine_hostname }}"
+
+- name: Generate the /etc/hosts file for the machine
+  sudo: yes
+  template:
+    src: hosts.j2
+    dest: /etc/hosts
+    owner: root
+    group: root
+    mode: 0644

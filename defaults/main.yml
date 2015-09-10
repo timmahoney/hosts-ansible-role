@@ -1,2 +1,9 @@
 ---
 # defaults file for hosts
+machine_hostname: localhost.localdomain
+
+hosts_entries:
+  - ip: 127.0.0.1
+    aliases:
+    - localhost.localdomain
+    - localhost

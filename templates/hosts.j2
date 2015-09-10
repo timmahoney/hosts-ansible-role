@@ -1,0 +1,5 @@
+{% if hosts_entries is defined %}
+{% for entry in hosts_entries %}
+{{ entry.ip }} {% for alias in entry.aliases %}{{ alias }} {% endfor %}
+{% endfor %}
+{% endif %}
