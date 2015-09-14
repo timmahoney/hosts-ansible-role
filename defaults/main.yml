@@ -3,7 +3,17 @@
 machine_hostname: localhost.localdomain
 
 hosts_entries:
-  - ip: 127.0.0.1
+  - ip: "127.0.0.1"
     aliases:
+    - "{{ inventory_hostname }}"
+    - "{{ inventory_hostname_short }}"
     - localhost.localdomain
     - localhost
+    - localhost4
+    - localhost4.localdomain4
+  - ip: "::1"
+    aliases:
+    - localhost
+    - localhost.localdomain
+    - localhost6
+    - localhost6.localdomain6
